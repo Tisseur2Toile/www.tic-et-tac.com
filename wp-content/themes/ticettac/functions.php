@@ -49,3 +49,24 @@ require_once( 'library/responsive-images.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
+
+
+
+function testPourriATitreDexemple() {
+    echo "coucou";
+}
+
+// --> Premier test pour actions
+    add_action('woocommerce_single_product_summary', 'testPourriATitreDexemple', 15);
+
+// --> Changement d'ordre on met le prix au dessus du titre
+    // 1. Supprime l'action initiale d'affichage du titre
+        remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+    // 2. Je change sa priorité
+        add_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 1);
+
+
+// --> Titre du produit sur l'image...
+    // 1. On enleve le titre du produit du DIV concerné
+    remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+    // 2. fonction rajouté dans le fichier single-product/product-image.php

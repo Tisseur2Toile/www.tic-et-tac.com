@@ -49,11 +49,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="summary entry-summary">
 
+
+
 		<?php
 			/**
 			 * woocommerce_single_product_summary hook.
 			 *
 			 * @hooked woocommerce_template_single_title - 5
+			 * 				--> Titre supprimé, reporté dans single-product/product-image.php
 			 * @hooked woocommerce_template_single_rating - 10
 			 * @hooked woocommerce_template_single_price - 10
 			 * @hooked woocommerce_template_single_excerpt - 20
@@ -61,12 +64,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
 			 */
-			 woocommerce_template_single_title();
-			 woocommerce_template_single_add_to_cart();
-			 woocommerce_template_single_rating();
-			 woocommerce_template_single_price();
-			 woocommerce_template_single_excerpt();
-			//do_action( 'woocommerce_single_product_summary' );
+			do_action( 'woocommerce_single_product_summary' );
+
 		?>
 
 	</div><!-- .summary -->
