@@ -51,6 +51,8 @@ require_once( 'library/responsive-images.php' );
 // require_once( 'library/protocol-relative-theme-assets.php' );
 
 
+define('_URL_IMAGES', get_stylesheet_directory_uri().'/assets/images/');
+
 
 function testPourriATitreDexemple() {
     echo "coucou";

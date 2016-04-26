@@ -52,4 +52,13 @@
 	</header>
 
 	<section class="container">
+		<div class="slide cycle-slideshow">
+			<img src="<?= _URL_IMAGES; ?>/_visuels_dyns/slide-1.jpg" alt="" />
+			<img src="<?= _URL_IMAGES; ?>/_visuels_dyns/slide-2.jpg" alt="" />
+			<img src="<?= _URL_IMAGES; ?>/_visuels_dyns/slide-3.jpg" alt="" />
+			<img src="<?= _URL_IMAGES; ?>/_visuels_dyns/slide-4.jpg" alt="" />
+			<div class="cycle-pager"></div>
+		</div>
+
+
 		<?php do_action( 'foundationpress_after_header' );
