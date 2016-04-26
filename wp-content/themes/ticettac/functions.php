@@ -72,3 +72,12 @@ function testPourriATitreDexemple() {
     // 1. On enleve le titre du produit du DIV concerné
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
     // 2. fonction rajouté dans le fichier single-product/product-image.php
+
+function my_slider() {
+    if (is_front_page() || is_home())
+    {
+        get_template_part( 'template-parts/slider' );
+            
+    }
+}
+add_action('foundationpress_after_header', 'my_slider', 10);

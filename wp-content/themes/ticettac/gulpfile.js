@@ -16,7 +16,7 @@ var del         = require('del');
 var URL = '';
 
 // Check for --production flag
-var isProduction = !!(argv.production);
+var isProduction = true; //!!(argv.production);
 
 // Browsers to target when prefixing CSS.
 var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
