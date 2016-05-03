@@ -46,6 +46,7 @@ require_once( 'library/sticky-posts.php' );
 
 /** Configure responsive image sizes */
 require_once( 'library/responsive-images.php' );
+require_once( 'library/slider-lib.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/protocol-relative-theme-assets.php' );
@@ -73,11 +74,15 @@ function testPourriATitreDexemple() {
     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
     // 2. fonction rajouté dans le fichier single-product/product-image.php
 
-function my_slider() {
-    if (is_front_page() || is_home())
+
+add_action('foundationpress_after_header', 'testPourriATitreDexemple', 1);
+
+function my_title($title, $idarticle) {
+    if(get_post_format($idarticle) == "video")
     {
-        get_template_part( 'template-parts/slider' );
-            
+        return "/2// -> ".$title;
     }
+    return "....3--".$title;
+
 }
-add_action('foundationpress_after_header', 'my_slider', 10);
+add_filter('the_title', 'my_title', 10, 2);
