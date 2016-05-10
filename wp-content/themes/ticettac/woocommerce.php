@@ -10,6 +10,21 @@ get_header(); ?>
 
 <div class="row">
 	<div class="small-12 large-8 columns" role="main">
+		<a href="#" class="clicker">Click Me !</a>
+		<div class="filtres" style="display: none;">
+			<?php dynamic_sidebar( 'filtres-widgets' ); ?>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('.clicker').on('click', function(e) {
+					e.preventDefault();
+					$('.filtres').slideDown();
+				});
+			});
+		</script>
+
+	</div>
+	<div class="small-12 large-8 columns" role="main">
 
 	<?php do_action( 'foundationpress_before_content' ); ?>
 
