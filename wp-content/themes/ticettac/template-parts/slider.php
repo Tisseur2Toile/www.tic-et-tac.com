@@ -1,4 +1,8 @@
-<div class="slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-speed="200" data-cycle-timeout="5000" data-cycle-slides="> div">
+<div class="slide cycle-slideshow"
+        data-cycle-fx="scrollHorz"
+        data-cycle-speed="200"
+        data-cycle-timeout="5000"
+        data-cycle-slides="> div">
     <div class="">
         <img src="<?= _URL_IMAGES; ?>/_visuels_dyns/slide-1.jpg" alt="" />
         <h2>Captain america 1</h2>
