@@ -82,7 +82,20 @@ function my_title($title, $idarticle) {
     {
         return "/2// -> ".$title;
     }
-    return "....3--".$title;
+	if (!is_admin())
+	{
+		if (strstr($title, "*"))
+		{
+			$tmp = explode("*", $title);
+			$title = $tmp[0].'<br><strong>'.$tmp[1].'<strong>';
+		}
+		$title = str_replace("|", "<br>", $title);
+	}
+
+
+
+
+	return "....3--".$title;
 
 }
 add_filter('the_title', 'my_title', 10, 2);
