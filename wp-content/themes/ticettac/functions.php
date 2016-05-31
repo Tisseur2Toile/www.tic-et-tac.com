@@ -99,3 +99,6 @@ function my_title($title, $idarticle) {
 
 }
 add_filter('the_title', 'my_title', 10, 2);
+
+
+define('_FORM_CONTACT', '[contact-form-7 id="19" title="Contact form 1"]');
